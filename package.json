@@ -1,0 +1,25 @@
+{
+  "name": "opencode-theme-plugin",
+  "version": "0.1.0-dev.0",
+  "private": true,
+  "description": "Experimental desktop theme manager for OpenCode v2",
+  "license": "MIT",
+  "type": "module",
+  "exports": { "./gui-experimental": "./dist/gui-experimental.cjs" },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test",
+    "dev": "vite build --watch"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "2.2.0",
+    "effect": "4.0.1",
+    "solid-js": "1.9.17",
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "vite-plugin-solid": "2.11.14"
+  }
+}
